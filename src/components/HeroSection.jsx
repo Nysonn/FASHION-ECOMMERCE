@@ -10,7 +10,7 @@ const cloudName = "df3lhzzy7";
 
 const HeroSection = () => {
   const videoRef = useRef(null);
-  const videoUrl = "https://res.cloudinary.com/df3lhzzy7/video/upload/v1742310431/showcase-fashion-pics_mf15cb.mp4";
+  const videoUrl = "https://res.cloudinary.com/df3lhzzy7/video/upload/v1742327732/showcase-fashion-pics_wywus0.mp4";
   
   // Controls for each moving block (added buyControls)
   const buyControls = useAnimation();

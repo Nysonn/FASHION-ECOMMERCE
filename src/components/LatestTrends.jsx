@@ -18,7 +18,7 @@ const LatestTrends = () => {
       title: "Summer Dress",
       category: "Women",
       // Use the imported image variable
-      image: sampleImage,
+      image: "https://res.cloudinary.com/df3lhzzy7/image/upload/v1742327735/summer-dress_acnw96.jpg",
       price: "$89.99",
       originalPrice: "$120.00",
       isNew: true,
@@ -29,7 +29,7 @@ const LatestTrends = () => {
       id: 2,
       title: "Casual Shirt",
       category: "Men",
-      image: sampleImage, // Same image for now
+      image: "https://res.cloudinary.com/df3lhzzy7/image/upload/v1742328090/casual-shirt_mx7ina.jpg", // Same image for now
       price: "$59.99",
       isNew: false,
       colors: ["#465667", "#C9C9C9", "#F5F5DC"],
@@ -38,7 +38,7 @@ const LatestTrends = () => {
       id: 3,
       title: "Kids Outfit",
       category: "Children",
-      image: sampleImage, // Same image for now
+      image: "https://res.cloudinary.com/df3lhzzy7/image/upload/v1742328050/kid-outfit_hgnduk.jpg", 
       price: "$49.99",
       originalPrice: "$65.00",
       isNew: true,
@@ -49,7 +49,7 @@ const LatestTrends = () => {
       id: 4,
       title: "Elegant Blouse",
       category: "Women",
-      image: sampleImage, // Same image for now
+      image: "https://res.cloudinary.com/df3lhzzy7/image/upload/v1742328045/elegant-blouce_axywxr.jpg", // Same image for now
       price: "$69.99",
       isNew: false,
       colors: ["#FFFFFF", "#000000", "#E8D0C9"],

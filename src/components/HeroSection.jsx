@@ -215,20 +215,20 @@ const HeroSection = () => {
       {/* Dynamic Text Block Container */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="relative p-5 md:p-10 rounded-sm w-full max-w-3xl h-[250px] md:h-[400px]">
-          {/* Vertical "BUY" text - now animated */}
+          {/* Vertical "BUY" text - now animated and closer to other words */}
           <motion.div 
-            className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 origin-center"
+            className="absolute left-8 md:left-12 top-1/2 transform -translate-y-1/2 origin-center"
             animate={buyControls}
             style={{ x: buyPosition.x, y: buyPosition.y }}
           >
-            <h2 className="vertical-text text-white font-black text-3xl md:text-5xl tracking-widest text-block">
+            <h2 className="vertical-text text-white font-black text-4xl md:text-6xl tracking-[0.5em] text-block">
               BUY
             </h2>
           </motion.div>
           
-          {/* Moving blocks - made responsive */}
+          {/* Moving blocks with updated font sizes */}
           <motion.div 
-            className="text-block absolute top-[20%] left-[40%] text-white text-xl md:text-3xl font-light px-2 md:px-4 py-1 md:py-2 rounded-sm"
+            className="text-block absolute top-[20%] left-[40%] text-white text-xl md:text-2xl font-semibold px-2 md:px-4 py-1 md:py-2 rounded-sm"
             animate={atControls}
             style={{ x: atPosition.x, y: atPosition.y }}
           >
@@ -236,7 +236,7 @@ const HeroSection = () => {
           </motion.div>
           
           <motion.div 
-            className="text-block absolute top-[40%] left-[30%] text-white text-2xl md:text-4xl font-medium px-2 md:px-4 py-1 md:py-2 rounded-sm"
+            className="text-block absolute top-[40%] left-[30%] text-white text-2xl md:text-3xl font-semibold px-2 md:px-4 py-1 md:py-2 rounded-sm"
             animate={theControls}
             style={{ x: thePosition.x, y: thePosition.y }}
           >
@@ -244,7 +244,7 @@ const HeroSection = () => {
           </motion.div>
           
           <motion.div 
-            className="text-block absolute top-[55%] left-[50%] text-white text-4xl md:text-6xl font-bold px-2 md:px-4 py-1 md:py-2 rounded-sm"
+            className="text-block absolute top-[55%] left-[50%] text-white text-3xl md:text-4xl font-extrabold px-2 md:px-4 py-1 md:py-2 rounded-sm"
             animate={bestControls}
             style={{ x: bestPosition.x, y: bestPosition.y }}
           >
@@ -252,7 +252,7 @@ const HeroSection = () => {
           </motion.div>
           
           <motion.div 
-            className="text-block absolute top-[70%] left-[35%] text-white text-3xl md:text-5xl font-semibold px-2 md:px-4 py-1 md:py-2 rounded-sm"
+            className="text-block absolute top-[70%] left-[35%] text-white text-3xl md:text-4xl font-extrabold px-2 md:px-4 py-1 md:py-2 rounded-sm"
             animate={pricesControls}
             style={{ x: pricesPosition.x, y: pricesPosition.y }}
           >

@@ -83,7 +83,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex-1">
               <Link to="/" className="flex items-center">
-                <h1 className="text-3xl font-light tracking-widest">
+                <h1 className="text-xl md:text-3xl font-light tracking-widest">
                   <span className="font-serif mr-1">C</span>
                   <motion.span 
                     className="font-extralight"

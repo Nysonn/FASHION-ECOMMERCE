@@ -1,23 +1,19 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-// Import the image directly - this is the most reliable method
-import sampleImage from "../../src/assets/images/sample-girl-image.jpg";
-
-const LatestTrends = () => {
+const Women = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
 
-  // Category filters
+  // Category filters for women's fashion
   const [activeFilter, setActiveFilter] = useState("All");
-  const categories = ["All", "Women", "Men", "Children", "Accessories"];
+  const categories = ["All", "Dresses", "Tops", "Bottoms", "Outerwear", "Accessories"];
 
-  // Enhanced product data with fixed image paths
-  const trendingItems = [
+  // Enhanced women's product data
+  const womenProducts = [
     {
       id: 1,
       title: "Summer Dress",
-      category: "Women",
-      // Use the imported image variable
+      category: "Dresses",
       image: "https://res.cloudinary.com/df3lhzzy7/image/upload/v1742327735/summer-dress_acnw96.jpg",
       price: "$89.99",
       originalPrice: "$120.00",
@@ -27,47 +23,85 @@ const LatestTrends = () => {
     },
     {
       id: 2,
-      title: "Casual Shirt",
-      category: "Men",
-      image: "https://res.cloudinary.com/df3lhzzy7/image/upload/v1742328090/casual-shirt_mx7ina.jpg", // Same image for now
-      price: "$59.99",
-      isNew: false,
-      colors: ["#465667", "#C9C9C9", "#F5F5DC"],
-    },
-    {
-      id: 3,
-      title: "Kids Outfit",
-      category: "Children",
-      image: "https://res.cloudinary.com/df3lhzzy7/image/upload/v1742328050/kid-outfit_hgnduk.jpg", 
-      price: "$49.99",
-      originalPrice: "$65.00",
-      isNew: true,
-      colors: ["#F5B8B8", "#B8D0F5"],
-      tag: "Sale",
-    },
-    {
-      id: 4,
-      title: "Elegant Blouse",
-      category: "Women",
-      image: "https://res.cloudinary.com/df3lhzzy7/image/upload/v1742328045/elegant-blouce_axywxr.jpg", // Same image for now
+      title: "Silk Blouse",
+      category: "Tops",
+      image: "https://res.cloudinary.com/df3lhzzy7/image/upload/v1742327735/summer-dress_acnw96.jpg",
       price: "$69.99",
       isNew: false,
       colors: ["#FFFFFF", "#000000", "#E8D0C9"],
     },
+    {
+      id: 3,
+      title: "Wide Leg Pants",
+      category: "Bottoms",
+      image: "https://res.cloudinary.com/df3lhzzy7/image/upload/v1742327735/summer-dress_acnw96.jpg",
+      price: "$75.99",
+      originalPrice: "$95.00",
+      isNew: false,
+      colors: ["#000000", "#E8D0C9", "#7B8C94"],
+      tag: "Sale",
+    },
+    {
+      id: 4,
+      title: "Tailored Blazer",
+      category: "Outerwear",
+      image: "https://res.cloudinary.com/df3lhzzy7/image/upload/v1742327735/summer-dress_acnw96.jpg",
+      price: "$129.99",
+      isNew: true,
+      colors: ["#000000", "#7B8C94", "#E2C8BA"],
+    },
+    {
+      id: 5,
+      title: "Wrap Dress",
+      category: "Dresses",
+      image: "https://res.cloudinary.com/df3lhzzy7/image/upload/v1742327735/summer-dress_acnw96.jpg",
+      price: "$79.99",
+      isNew: false,
+      colors: ["#7B8C94", "#E8D0C9", "#000000"],
+    },
+    {
+      id: 6,
+      title: "Statement Necklace",
+      category: "Accessories",
+      image: "https://res.cloudinary.com/df3lhzzy7/image/upload/v1742327735/summer-dress_acnw96.jpg",
+      price: "$45.99",
+      originalPrice: "$60.00",
+      isNew: false,
+      colors: ["#FFD700", "#C0C0C0"],
+      tag: "Sale",
+    },
+    {
+      id: 7,
+      title: "Linen Shirt",
+      category: "Tops",
+      image: "https://res.cloudinary.com/df3lhzzy7/image/upload/v1742327735/summer-dress_acnw96.jpg",
+      price: "$59.99",
+      isNew: true,
+      colors: ["#FFFFFF", "#E2C8BA", "#7B8C94"],
+    },
+    {
+      id: 8,
+      title: "Leather Tote Bag",
+      category: "Accessories",
+      image: "https://res.cloudinary.com/df3lhzzy7/image/upload/v1742327735/summer-dress_acnw96.jpg",
+      price: "$159.99",
+      isNew: false,
+      colors: ["#8B4513", "#000000", "#E2C8BA"],
+    },
   ];
 
   // Filter items based on active category
-  const filteredItems = activeFilter === "All" 
-    ? trendingItems 
-    : trendingItems.filter(item => item.category === activeFilter);
+  const filteredProducts = activeFilter === "All" 
+    ? womenProducts 
+    : womenProducts.filter(item => item.category === activeFilter);
 
   return (
     <section className="py-20 bg-[#f8f8f8]">
       <div className="container mx-auto px-4">
         {/* Section heading with elegant typography */}
         <div className="text-center mb-12">
-          <h4 className="text-sm tracking-widest uppercase mb-2 text-gray-500">Discover</h4>
-          <h2 className="text-3xl md:text-4xl font-light tracking-wide mb-3">Latest Trends</h2>
+          <h4 className="text-sm tracking-widest uppercase mb-2 text-gray-500">Collection</h4>
+          <h2 className="text-3xl md:text-4xl font-light tracking-wide mb-3">Women's Fashion</h2>
           <div className="w-20 h-0.5 bg-black mx-auto"></div>
         </div>
         
@@ -97,7 +131,7 @@ const LatestTrends = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          {filteredItems.map((item) => (
+          {filteredProducts.map((item) => (
             <motion.div
               key={item.id}
               className="group relative"
@@ -140,11 +174,18 @@ const LatestTrends = () => {
                   <button className="text-black hover:text-gray-600 transition-colors">
                     <span className="text-xs tracking-wider uppercase">Quick View</span>
                   </button>
-                  <button className="text-black hover:text-gray-600 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                  </button>
+                  <div className="flex space-x-3">
+                    <button className="text-black hover:text-gray-600 transition-colors">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                      </svg>
+                    </button>
+                    <button className="text-black hover:text-gray-600 transition-colors">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
               
@@ -189,7 +230,7 @@ const LatestTrends = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            View All Collection
+            View All Women's Collection
           </motion.button>
         </div>
       </div>
@@ -208,4 +249,4 @@ const LatestTrends = () => {
   );
 };
 
-export default LatestTrends; 
+export default Women;

@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 
 // Import image directly
-import sampleImage from "/src/assets/images/sample-girl-image.jpg";
+import sampleImage from "../../../src/assets/images/sample-girl-image.jpg";
 
 const ExploreCollective = () => {
   const [hoveredCategory, setHoveredCategory] = useState(null);

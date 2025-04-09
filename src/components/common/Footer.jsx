@@ -9,6 +9,9 @@ import {
   FaTwitter, 
   FaPinterestP 
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
+const MotionLink = motion(Link);
 
 const Footer = () => {
   return (
@@ -72,58 +75,58 @@ const Footer = () => {
                 <div className="text-white mr-3 mt-0.5">
                   <FaEnvelope className="h-4 w-4" />
                 </div>
-                <a href="mailto:info@collective.com" className="text-sm text-gray-300 hover:text-white transition-colors">
+                <Link to="mailto:info@collective.com" className="text-sm text-gray-300 hover:text-white transition-colors">
                   contact@collective.com
-                </a>
+                </Link>
               </div>
               <div className="flex items-start">
                 <div className="text-white mr-3 mt-0.5">
                   <FaPhone className="h-4 w-4" />
                 </div>
-                <a href="tel:+256755976605" className="text-sm text-gray-300 hover:text-white transition-colors">
+                <Link to="tel:+256755976605" className="text-sm text-gray-300 hover:text-white transition-colors">
                   +256 755 976 605 
-                </a>
+                </Link>
               </div>
             </div>
 
             {/* Social icons */}
             <div className="flex space-x-5 mt-8">
-              <motion.a 
-                href="#" 
+              <MotionLink 
+                to="#"
                 className="w-10 h-10 border border-[#3d3d3d] flex items-center justify-center text-gray-400 hover:border-white hover:text-white transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <span className="sr-only">Facebook</span>
                 <FaFacebookF className="h-4 w-4" />
-              </motion.a>
-              <motion.a 
-                href="#" 
+              </MotionLink>
+              <MotionLink 
+                to="#"
                 className="w-10 h-10 border border-[#3d3d3d] flex items-center justify-center text-gray-400 hover:border-white hover:text-white transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <span className="sr-only">Instagram</span>
                 <FaInstagram className="h-4 w-4" />
-              </motion.a>
-              <motion.a 
-                href="#" 
+              </MotionLink>
+              <MotionLink 
+                to="#"
                 className="w-10 h-10 border border-[#3d3d3d] flex items-center justify-center text-gray-400 hover:border-white hover:text-white transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <span className="sr-only">Twitter</span>
                 <FaTwitter className="h-4 w-4" />
-              </motion.a>
-              <motion.a 
-                href="#" 
+              </MotionLink>
+              <MotionLink 
+                to="#"
                 className="w-10 h-10 border border-[#3d3d3d] flex items-center justify-center text-gray-400 hover:border-white hover:text-white transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <span className="sr-only">Pinterest</span>
                 <FaPinterestP className="h-4 w-4" />
-              </motion.a>
+              </MotionLink>
             </div>
           </div>
 
@@ -134,13 +137,41 @@ const Footer = () => {
               <div>
                 <h4 className="text-xs uppercase tracking-wider text-gray-400 font-medium mb-5">Collections</h4>
                 <ul className="space-y-3">
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">New Arrivals</a></li>
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Women</a></li>
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Men</a></li>
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Children</a></li>
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Accessories</a></li>
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Sale</a></li>
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Lookbook</a></li>
+                  <li>
+                    <Link to="/new-in" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      New Arrivals
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/women" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Women
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/men" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Men
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/home" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Children
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/accessories" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Accessories
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/sale" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Sale
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/home" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Lookbook
+                    </Link>
+                  </li>
                 </ul>
               </div>
 
@@ -148,12 +179,36 @@ const Footer = () => {
               <div>
                 <h4 className="text-xs uppercase tracking-wider text-gray-400 font-medium mb-5">Customer Care</h4>
                 <ul className="space-y-3">
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Help Center</a></li>
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Track Your Order</a></li>
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Returns & Exchanges</a></li>
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Shipping Information</a></li>
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Size Guide</a></li>
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+                  <li>
+                    <Link to="/home" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Help Center
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/home" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Track Your Order
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/home" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Returns &amp; Exchanges
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/home" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Shipping Information
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/home" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Size Guide
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/home" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Contact Us
+                    </Link>
+                  </li>
                 </ul>
               </div>
 
@@ -161,11 +216,31 @@ const Footer = () => {
               <div>
                 <h4 className="text-xs uppercase tracking-wider text-gray-400 font-medium mb-5">About</h4>
                 <ul className="space-y-3">
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Our Story</a></li>
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Sustainability</a></li>
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Careers</a></li>
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Press</a></li>
-                  <li><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Affiliates</a></li>
+                  <li>
+                    <Link to="#" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Our Story
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="#" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Sustainability
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="#" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Careers
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="#" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Press
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="#" className="text-sm text-gray-300 hover:text-white transition-colors">
+                      Affiliates
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -179,18 +254,18 @@ const Footer = () => {
               © {new Date().getFullYear()} Collective. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-              <a href="#" className="text-xs text-gray-500 hover:text-white transition-colors">
+              <Link to="#" className="text-xs text-gray-500 hover:text-white transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-xs text-gray-500 hover:text-white transition-colors">
+              </Link>
+              <Link to="#" className="text-xs text-gray-500 hover:text-white transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="text-xs text-gray-500 hover:text-white transition-colors">
+              </Link>
+              <Link to="#" className="text-xs text-gray-500 hover:text-white transition-colors">
                 Accessibility
-              </a>
-              <a href="#" className="text-xs text-gray-500 hover:text-white transition-colors">
+              </Link>
+              <Link to="#" className="text-xs text-gray-500 hover:text-white transition-colors">
                 Cookie Preferences
-              </a>
+              </Link>
             </div>
           </div>
           
@@ -208,4 +283,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;
